@@ -4,10 +4,10 @@ connect()
 
 import models from '#models/index'
 
-export default {
-    models
+async function connect() {
+    await mongoose.connect('mongodb://localhost:27017/Telegram')
 }
 
-async function connect() {
-    await mongoose.connect('mongodb://localhost/Telegram')
+export default {
+    models
 }
